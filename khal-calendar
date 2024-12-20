@@ -340,12 +340,12 @@ load_bar_config() {
         BAR_CONFIG=$(i3-msg -t get_bar_config "$(i3-msg -t get_bar_config | jq -r '.[]' | head -n 1)")
     fi
 
-    POSITION=$(echo "$BAR_CONFIG" | jq -r '.position')
-    FONT=$(convert_i3_to_rofi_font "$(echo "$BAR_CONFIG" | jq -r '.font')")
-    CALENDAR_BG=$(echo "$BAR_CONFIG" | jq -r '.colors.background')
-    CALENDAR_FG=$(echo "$BAR_CONFIG" | jq -r '.colors.statusline')
-    TODAY_BG=$(echo "$BAR_CONFIG" | jq -r '.colors.active_workspace_bg')
-    TODAY_FG=$(echo "$BAR_CONFIG" | jq -r '.colors.active_workspace_text')
+    empty "$POSITION" && POSITION=$(echo "$BAR_CONFIG" | jq -r '.position')
+    empty "$FONT" && FONT=$(convert_i3_to_rofi_font "$(echo "$BAR_CONFIG" | jq -r '.font')")
+    empty "$CALENDAR_BG" && CALENDAR_BG=$(echo "$BAR_CONFIG" | jq -r '.colors.background')
+    empty "$CALENDAR_FG" && CALENDAR_FG=$(echo "$BAR_CONFIG" | jq -r '.colors.statusline')
+    empty "$TODAY_BG" && TODAY_BG=$(echo "$BAR_CONFIG" | jq -r '.colors.active_workspace_bg')
+    empty "$TODAY_FG" && TODAY_FG=$(echo "$BAR_CONFIG" | jq -r '.colors.active_workspace_text')
 
     debug "Loaded bar config: $BAR_CONFIG"
     debug "Position: $POSITION"
@@ -415,11 +415,11 @@ main() {
     declare -r SHORTFMT="${SHORTFMT:-+%d/%m/%Y}"
 
     # Event format for khal
-    declare -r EVENT_FORMAT="{start-time} {title}"
+    declare -r EVENT_FORMAT="${EVENT_FORMAT:-{start-time} {title}}"
 
     # Rofi appearance
-    declare -r ROFI_WIDTH="30%"
-    declare -r ROFI_LOCATION="northwest"
+    declare -r ROFI_WIDTH="${ROFI_WIDTH:-30%}"
+    declare -r ROFI_LOCATION="${ROFI_LOCATION:-northwest}"
 
     # Keyboard shortcuts (using Alt instead of Ctrl to avoid conflicts)
     declare -a ROFI_CALENDAR_OPTIONS=(

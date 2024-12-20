@@ -19,12 +19,13 @@ interval=60
 LABEL=
 FONT=mono 12
 # Optional: Specify bar position if auto-detection fails
-#BAR_POS=top
+#POSITION=top
 # Optional: Specify which i3bar to use if you have multiple bars
 #BAR_ID=bar-0
 # Optional: Custom date formats
 #DATEFMT=+%a %d %b %Y
 #SHORTFMT=+%d/%m/%Y
+#FONT=mono 12
 # Optional: Custom rofi config file
 #ROFI_CONFIG_FILE=/path/to/your/rofi/config
 # Optional: Custom rofi width
@@ -37,6 +38,8 @@ FONT=mono 12
 #                      -kb-custom-3 Alt+a \
 #                      -kb-custom-4 Alt+t"
 # Optional: Custom rofi appearance
+#CALENDAR_BG="#005577"
+#CALENDAR_FG="#ffffff"
 #TODAY_BG="#005577"
 #TODAY_FG="#ffffff"
 # Optional: Custom event format
@@ -74,7 +77,7 @@ For example: `2024-01-20 14:00 Team Meeting`
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| BAR_POS | bottom | Position of the i3bar (top/bottom) |
+| POSITION | bottom | Position of the i3bar (top/bottom) |
 | BAR_ID | - | Identifier for specific i3bar when using multiple bars |
 | FONT | mono 12 | Font specification for rofi |
 | DATEFMT | +%a %d %b %Y | Long date format |
@@ -83,8 +86,10 @@ For example: `2024-01-20 14:00 Team Meeting`
 | ROFI_WIDTH | 30% | Custom rofi width |
 | ROFI_LOCATION | northwest | Custom rofi location |
 | ROFI_CALENDAR_OPTIONS | -kb-custom-1 Alt+n \ -kb-custom-2 Alt+p \ -kb-custom-3 Alt+a \ -kb-custom-4 Alt+t | Custom rofi calendar options |
-| TODAY_BG | #005577 | Custom today background color |
-| TODAY_FG | #ffffff | Custom today foreground color |
+| CALENDAR_BG | - | Custom calendar background color |
+| CALENDAR_FG | - | Custom calendar foreground color |
+| TODAY_BG | - | Custom today background color |
+| TODAY_FG | - | Custom today foreground color |
 | EVENT_FORMAT | {start-time} {title} | Custom event format |
 
 ## Display
