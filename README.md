@@ -23,7 +23,7 @@ FONT=mono 12
 # Optional: Specify which i3bar to use if you have multiple bars
 #BAR_ID=bar-0
 # Optional: Custom date formats
-#DATEFTM=+%a %d %b %Y
+#DATEFMT=+%a %d %b %Y
 #SHORTFMT=+%d/%m/%Y
 # Optional: Custom rofi config file
 #ROFI_CONFIG_FILE=/path/to/your/rofi/config
@@ -77,7 +77,7 @@ For example: `2024-01-20 14:00 Team Meeting`
 | BAR_POS | bottom | Position of the i3bar (top/bottom) |
 | BAR_ID | - | Identifier for specific i3bar when using multiple bars |
 | FONT | mono 12 | Font specification for rofi |
-| DATEFTM | +%a %d %b %Y | Long date format |
+| DATEFMT | +%a %d %b %Y | Long date format |
 | SHORTFMT | +%d/%m/%Y | Short date format |
 | ROFI_CONFIG_FILE | /dev/null | Custom rofi config file |
 | ROFI_WIDTH | 30% | Custom rofi width |
