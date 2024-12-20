@@ -98,6 +98,29 @@ For example: `2024-01-20 14:00 Team Meeting`
 - Calendar popup shows the current month with the current day highlighted
 - Events are displayed with time and title
 
+## Development
+
+To assist with development and debugging, you can use the `DEBUG` environment variable. Setting `DEBUG` to `1` will enable debug output, which provides detailed information about the script's execution.
+
+### Enabling Debug Mode
+
+To enable debug mode, set the `DEBUG` environment variable to `1` before running the script:
+
+```bash
+export DEBUG=1
+./khal-calendar
+```
+
+This will output debug information to the console, helping you trace the script's behavior and identify any issues.
+
+Simulate different i3blocks mouse button clicks:
+
+```bash
+DEBUG=1 BLOCK_BUTTON=1 ./khal-calendar # left click
+DEBUG=1 BLOCK_BUTTON=2 ./khal-calendar # middle click
+DEBUG=1 BLOCK_BUTTON=3 ./khal-calendar # right click
+```
+
 ## License
 
 [GNU General Public License v2][license]
