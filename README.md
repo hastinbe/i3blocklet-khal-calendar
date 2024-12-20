@@ -1,6 +1,6 @@
 # khal-calendar
 
-Displays the current date and a calendar popup using rofi that integrates with khal calendar.
+Displays the current date and a calendar popup using rofi that integrates with khal calendar. This is currently alpha and a work in progress. Expect bugs and breaking changes.
 
 [![License: GPL v2][license-badge]][license]
 
